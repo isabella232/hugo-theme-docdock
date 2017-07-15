@@ -2,16 +2,16 @@
       </div>
     </div>
 
-    
- 
-    
+
+
+
 
     <div id="navigation">
         <!-- Next prev page -->
         {{ $currentNode := . }}
-        
+
         {{ template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode }}
-        
+
         {{ define "menu-nextprev" }}
             {{$currentNode := .currentnode }}
             {{ if ne .menu.Params.hidden true}}
@@ -62,11 +62,7 @@
     <script src="{{"js/learn.js" | relURL}}"></script>
     <script src="{{"js/hugo-learn.js" | relURL}}"></script>
 
-    
-    <link href="{{"mermaid/mermaid.css" | relURL}}" type="text/css" rel="stylesheet"/>
-    <script src="{{"mermaid/mermaid.js" | relURL}}"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-    
+
 
     {{ partial "custom-footer.html" . }}
   </body>
